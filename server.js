@@ -16,6 +16,10 @@ connectDB();
 import userRoute from './modules/user/route/userRoute.js';
 app.use('/', userRoute);
 
+// Import userPortfolioRoute and use 
+import userPortfolioRoute from './modules/user/route/userPortfolioRoute.js';
+app.use('/portfolio', userPortfolioRoute);
+
 
 
 

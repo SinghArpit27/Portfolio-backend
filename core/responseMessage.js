@@ -29,6 +29,15 @@ export const responseMessage = {
     // Profile Update
     PROFILE_UPDATE: "Profile updated successfully",
 
+    // Add Projects 
+    PROJECT_ADDED:"Project Added Successfully",
+
+    // Add technical Skills
+    TECHNICAL_SKILLS_ADDED: "Added Technical Skill",
+
+    // Add Experience
+    EXPERIENCE_ADDED:"Experience Added Successfully",
+
     SUCCESS: 'Success',
     CREATED: 'Resource created successfully',
     BAD_REQUEST: 'Bad request',

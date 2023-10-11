@@ -16,11 +16,12 @@ import { expressValidationResult } from '../../../helper/validationError.js';
 
 // Import Middleware for user Authentication
 import { authenticateToken } from '../../../middleware/jwtAuthorization.js';
+import { upload } from '../../../middleware/multerUploads.js';
 
 // Routes Definitions For USER AUTH MODULE
 
 // User Registration Route POST Request
-userRoute.post('/register', registerValidation, expressValidationResult, UserController.userRegister);
+userRoute.post('/register', upload.single('image'), registerValidation, expressValidationResult, UserController.userRegister);
 
 // User Email Verification POST Request
 userRoute.post('/email-verification', otpValidation, expressValidationResult, UserController.OTPVerification);

@@ -33,7 +33,14 @@ class UserController{
                         name: req.body.name,
                         email: req.body.email,
                         phone: req.body.phone,
-                        password: hashPassword
+                        password: hashPassword,
+                        linkedin_url: req.body.linkedin_url,
+                        image: req.file.filename,
+                        about: {
+                            name: req.body.name,
+                            professional_title: req.body.professional_title,
+                            bio_description: req.body.bio_description,
+                        },
                     });
 
                     const userData = await newUser.save();

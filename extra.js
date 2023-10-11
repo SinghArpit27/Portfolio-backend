@@ -114,3 +114,55 @@ const userSchema2 = new mongoose.Schema({
   
   
   */
+
+
+
+    // // Add Experience Controller
+    // static async addExperience(req, res) {
+    //     try {
+    //         const userId = req.userId;
+    //         const userData = await User.findById({ _id: userId });
+
+    //         if (userData) {
+    //             const { title, company, location, startDate, endDate, description } = req.body;
+    //             const projectData = await Professional.findOne({ userId: userId });
+
+    //             if (projectData) {
+    //                 // User already has a professional record, add a new experience to their existing experience array.
+    //                 projectData.experience.push({
+    //                     title,
+    //                     company,
+    //                     location,
+    //                     startDate,
+    //                     endDate,
+    //                     description,
+    //                 });
+
+    //                 await projectData.save();
+    //             } else {
+    //                 // User doesn't have a professional record, create a new one with the experience.
+    //                 const newProfessional = new Professional({
+    //                     userId: userId,
+    //                     experience: [
+    //                         {
+    //                             title,
+    //                             company,
+    //                             location,
+    //                             startDate,
+    //                             endDate,
+    //                             description,
+    //                         },
+    //                     ],
+    //                 });
+
+    //                 await newProfessional.save();
+    //             }
+
+    //             httpResponse(res, statusCode.OK, responseStatus.SUCCESS, responseMessage.EXPERIENCE_ADDED);
+    //         } else {
+    //             httpResponse(res, statusCode.BAD_REQUEST, responseStatus.FAILURE, responseMessage.UNAUTHORIZED);
+    //         }
+    //     } catch (error) {
+    //         httpResponse(res, statusCode.INTERNAL_SERVER_ERROR, responseStatus.FAILURE, responseMessage.INTERNAL_SERVER_ERROR);
+    //     }
+    // }

@@ -30,9 +30,9 @@ export const registerValidation = [
     .notEmpty().withMessage("Mobile number is required")
     .isMobilePhone("any", { strictMode: false }).withMessage("Invalid mobile number")
     .custom(value => {
-      if (typeof value !== "number") {
-        throw new Error("Mobile number must be a number");
-      }
+      // if (typeof value !== "number") {
+      //   throw new Error("Mobile number must be a number");
+      // }
 
       if (value.toString().length !== 10) {
         throw new Error("Mobile number must be 10 digits");
@@ -138,9 +138,9 @@ export const updateProfileValidation = [
     .notEmpty().withMessage("Mobile number is required")
     .isMobilePhone("any", { strictMode: false }).withMessage("Invalid mobile number")
     .custom(value => {
-      if (typeof value !== "number") {
-        throw new Error("Mobile number must be a number");
-      }
+      // if (typeof value !== "number") {
+      //   throw new Error("Mobile number must be a number");
+      // }
       if (value.toString().length !== 10) {
         throw new Error("Mobile number must be 10 digits");
       }

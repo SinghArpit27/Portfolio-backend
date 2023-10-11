@@ -22,39 +22,16 @@ const userSchema = new mongoose.Schema({
     linkedin_url: {
         type: String, // LinkedIn profile URL.
     },
-    experience: [
-        {
-            title: String, // Job title
-            company: String, // Company name
-            location: String, // Location of the job
-            startDate: Date, // Start date of the job
-            endDate: Date, // End date of the job
-            description: String, // Description of the role and responsibilities
-        },
-    ],
-    projects: [
-        {
-            github_url: String, // GitHub repository URL for a project.
-            live_url: String, // Live project URL.
-            title: String, // Title of the project.
-            image: {
-                public_id: String, // Public ID for an image (e.g., cloud storage reference).
-                url: String, // URL for the project image.
-            },
-            description: String, // Description of the project.
-            techStack: String, // Technologies used in the project.
-        },
-    ],
+    image: {
+        type: String, // URL for the avatar image.
+        required: true,
+    },
     about: {
         name: String, // User's full name.
-        title: String, // User's professional title.
-        subtitle: String, // A subtitle, if needed.
-        description: String, // User's bio/description.
-        quote: String, // An inspirational quote or tagline.
-        avatar: {
-            public_id: String, // Public ID for the avatar image.
-            url: String, // URL for the avatar image.
-        },
+        professional_title: String, // User's professional title.
+        bio_description: String, // User's bio/description.
+        // quote: String, // An inspirational quote or tagline.
+        // avatar: String, // URL for the avatar image.
     },
     user_role: {
         type: Number,
